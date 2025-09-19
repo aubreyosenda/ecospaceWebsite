@@ -1,0 +1,105 @@
+#ecospace-footer {
+  background-color: #12295a;
+  color: #fff;
+  padding: 50px 20px 30px;
+  border-radius: 25px 25px 0 0;
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+#ecospace-footer .footer-content {
+  width: 100%;
+  padding: 0 20px;   /* 20px left and right */
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Company Info */
+#ecospace-footer .company-info {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+#ecospace-footer .company-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#ecospace-footer .footer-logo {
+  max-width: 60px;
+  height: auto;
+}
+
+#ecospace-footer .company-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Services */
+#ecospace-footer .services-grid {
+  flex: 3 1 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+}
+
+#ecospace-footer .services-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+#ecospace-footer .services-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#ecospace-footer .services-column li {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Social Icons */
+#ecospace-footer .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+#ecospace-footer .social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  font-size: 14px;
+}
+
+#ecospace-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#ecospace-footer a:hover {
+  color: #00aaff;
+}
+
+/* Copyright */
+#ecospace-footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #bbb;
+}

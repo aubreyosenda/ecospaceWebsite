@@ -1,0 +1,157 @@
+
+        /* Carousel Component Styles */
+        :root {
+          --carousel-slide-height: 95vh; /* Reduced from 100vh to create space */
+          --carousel-gradient: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+          --carousel-heading-color: #fff;
+          --carousel-text-color: #fff;
+          --carousel-badge-bg: rgba(255, 255, 255, 0.15);
+          --carousel-button-gradient: linear-gradient(45deg, #28a745, #20c997);
+          --carousel-button-hover: linear-gradient(45deg, #218838, #1bb490);
+          --carousel-indicator-bg: rgba(255, 255, 255, 0.5);
+          --carousel-indicator-active: #fff;
+        }
+
+        .carousel-container {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          position: relative;
+          z-index: 1; /* Ensure carousel stays behind header */
+        }
+        
+        /* Ensure carousel content aligns with header */
+        .carousel-container .container-fluid {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 40px;
+        }
+        
+        /* Carousel Styles */
+        .carousel-slide-item {
+          height: var(--carousel-slide-height);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          padding-bottom: 40px; /* Added padding to move content up */
+        }
+
+        .carousel-content-container h1 {
+          font-size: 5rem;
+          font-weight: bold;
+          color: var(--carousel-heading-color);
+          margin-bottom: 1.5rem;
+          line-height: 1.2;
+        }
+
+        .carousel-content-container p {
+          font-size: 1.25rem;
+          color: var(--carousel-text-color);
+          margin-bottom: 2rem;
+          line-height: 1.6;
+          opacity: 0.9;
+        }
+
+        .carousel-badge {
+          background-color: var(--carousel-badge-bg);
+          color: var(--carousel-text-color);
+          padding: 8px 20px;
+          border-radius: 20px;
+          display: inline-block;
+          margin-bottom: 1rem;
+          font-weight: 600;
+          font-size: 0.9rem;
+          backdrop-filter: blur(10px);
+        }
+
+        .carousel-action-button {
+          background: var(--carousel-button-gradient);
+          color: var(--carousel-text-color);
+          padding: 15px 30px;
+          border: none;
+          border-radius: 25px;
+          font-weight: 600;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          transition: all 0.3s ease;
+        }
+
+        .carousel-action-button:hover {
+          background: var(--carousel-button-hover);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+          color: var(--carousel-text-color);
+        }
+
+        .carousel-navigation-indicators {
+          bottom: 200px;
+        }
+
+        .carousel-navigation-indicators [data-bs-target] {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: var(--carousel-indicator-bg);
+          border: none;
+          margin: 0 8px;
+        }
+
+        .carousel-navigation-indicators .active {
+          background-color: var(--carousel-indicator-active);
+          transform: scale(1.2);
+        }
+
+        /* Responsive carousel */
+        @media (max-width: 768px) {
+          .carousel-slide-item {
+            height: 70vh;
+            padding-bottom: 30px; /* Adjusted for mobile */
+          }
+          
+          .carousel-content-container h1 {
+            font-size: 2.5rem;
+          }
+          
+          .carousel-content-container p {
+            font-size: 1.1rem;
+          }
+          
+          .carousel-action-button {
+            padding: 12px 25px;
+            font-size: 0.95rem;
+          }
+          
+          .carousel-navigation-indicators {
+            bottom: 140px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .carousel-slide-item {
+            height: 60vh;
+            padding-bottom: 20px; /* Adjusted for small mobile */
+          }
+          
+          .carousel-content-container h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+          
+          .carousel-content-container p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+          }
+
+          .carousel-navigation-indicators {
+            bottom: 130px;
+          }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1399.98px) {
+          .carousel-container .container-fluid {
+            padding: 0 12px;
+          }
+        }
+    
